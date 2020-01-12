@@ -1,5 +1,7 @@
 {
   "name": "Miasta",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
