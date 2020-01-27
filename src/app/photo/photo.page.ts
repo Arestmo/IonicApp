@@ -11,13 +11,12 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class PhotoPage implements OnInit {
 
   photo: string;
-  
   cameraOptions: CameraOptions = {
     quality: 20,
     destinationType: this.camera.DestinationType.DATA_URL,
     encodingType: this.camera.EncodingType.JPEG,
     mediaType: this.camera.MediaType.PICTURE
-  }
+  };
 
   constructor(private camera: Camera) { }
 

@@ -13,13 +13,13 @@ export class CityPage implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router) {
     this.route.queryParams.subscribe(params => {
-      if (params && params.city_data) {
-        this.data = JSON.parse(params.city_data);
-      }
+      // if (params && params.city_data) {
+      //   this.data = JSON.parse(params.city_data);
+      // }
 
       if (this.router.getCurrentNavigation().extras.state) {
         this.data = this.router.getCurrentNavigation().extras.state.city_data;
-        // this.input_desc_model = this.data.description;
+        console.log(this.data);
       }
     });
    }
@@ -27,8 +27,7 @@ export class CityPage implements OnInit {
   ngOnInit() {
   }
 
-  // ionViewWillLeave() {
-  //   console.log(this.input_desc_model);
-  // }
-
+   ionViewWillLeave() {
+    console.log('Opuszczono stronę miasta: ' + this.data.name);
+  }
 }

@@ -36,14 +36,14 @@ export class HomePage {
   photos: any[];
   constructor(private router: Router, public camera: Camera, public file: File) {}
 
-  openDetailsWithQueryParams(id) {
-    let navigationExtras: NavigationExtras = {
-      queryParams: {
-        city_data: JSON.stringify(this.cities[id])
-      }
-    };
-    this.router.navigate(['city'], navigationExtras);
-  }
+  // openDetailsWithQueryParams(id) {
+  //   let navigationExtras: NavigationExtras = {
+  //     queryParams: {
+  //       city_data: JSON.stringify(this.cities[id])
+  //     }
+  //   };
+  //   this.router.navigate(['city'], navigationExtras);
+  // }
 
   showCity(id) {
     let navigationExtras: NavigationExtras = {
